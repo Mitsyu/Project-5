@@ -11,11 +11,11 @@ namespace Project_5
             while (running)
             {
                 Console.WriteLine("--- Main Menu ---");
-                Console.WriteLine("1. Bank Program ");
-                Console.WriteLine("2.");
-                Console.WriteLine("3.");
+                Console.WriteLine("1. Bank Program");
+                Console.WriteLine("2. Parking Garage Cost");
+                Console.WriteLine("3. Hurricane");
                 Console.WriteLine("");
-                Console.WriteLine("Choose what program to run (1-): ");
+                Console.WriteLine("Choose what program to run (1-3): ");
                 string choice = Console.ReadLine(); 
 
                 switch (choice)
@@ -23,6 +23,18 @@ namespace Project_5
 
                     case "1":
                         BankProgram();
+                        break;
+
+                    case "2":
+                        ParkingGarage();
+                        break;
+
+                    case "3":
+                        RunHurricane();
+                        break;
+
+                    default:
+                        Console.WriteLine();
                         break;
                         
                 }
@@ -99,8 +111,15 @@ namespace Project_5
             Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine();
+        }
 
+        public static void ParkingGarage()
+        {
 
+        }
+
+        public static void RunHurricane()
+        {
 
         }
     }
