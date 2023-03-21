@@ -142,7 +142,45 @@ namespace Project_5
 
         public static void RunHurricane()
         {
+            Console.WriteLine();
+            Console.WriteLine("-- Saffir-Simpson Hurricane Scale --");
+            Console.WriteLine();
 
+            Console.WriteLine("Enter the hurricane category (1-5):");
+            int category = int.Parse(Console.ReadLine());
+
+            int mph, kts, kmh;
+            switch (category)
+            {
+                case 1:
+                    mph = 74; kts = 64; kmh = 119;
+                    Console.WriteLine("Wind speed: {0} mph, {1} kts, {2} km/hr", mph, kts, kmh);
+                    break;
+                case 2:
+                    mph = 96; kts = 83; kmh = 154;
+                    Console.WriteLine("Wind speed: {0} mph, {1} kts, {2} km/hr", mph, kts, kmh);
+                    break;
+                case 3:
+                    mph = 111; kts = 96; kmh = 178;
+                    Console.WriteLine("Wind speed: {0} mph, {1} kts, {2} km/hr", mph, kts, kmh);
+                    break;
+                case 4:
+                    mph = 131; kts = 114; kmh = 210;
+                    Console.WriteLine("Wind speed: {0} mph, {1} kts, {2} km/hr", mph, kts, kmh);
+                    break;
+                case 5:
+                    mph = 156; kts = 135; kmh = 249;
+                    Console.WriteLine("Wind speed: >{0} mph, >{1} kts, >{2} km/hr", mph, kts, kmh);
+                    break;
+
+                default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid category input");
+                    Console.ResetColor();
+                    break;
+            }
+
+           
         }
     }
 }
