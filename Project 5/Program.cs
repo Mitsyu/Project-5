@@ -10,11 +10,13 @@ namespace Project_5
 
             while (running)
             {
+                Console.WriteLine();
+                Console.WriteLine();
                 Console.WriteLine("--- Main Menu ---");
                 Console.WriteLine("1. Bank Program");
                 Console.WriteLine("2. Parking Garage Cost");
                 Console.WriteLine("3. Hurricane");
-                Console.WriteLine("");
+                Console.WriteLine();
                 Console.WriteLine("Choose what program to run (1-3): ");
                 string choice = Console.ReadLine(); 
 
