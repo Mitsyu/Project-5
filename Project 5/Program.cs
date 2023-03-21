@@ -115,6 +115,28 @@ namespace Project_5
 
         public static void ParkingGarage()
         {
+            double minFee = 4.0;
+            double hourlyRate = 2.0;
+            double maxCharge = 20.0;
+
+            Console.Write("Enter the number of minutes parked in garage: ");
+            int minutes = int.Parse(Console.ReadLine());
+
+            if (minutes <= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Invaild");
+                Console.ResetColor();
+                return;
+            }
+
+            int hours = (int)Math.Ceiling(minutes / 60.0);
+
+            double cost = minFee + (hours - 1) * hourlyRate;
+
+            Console.WriteLine("Hours parked: {0}", hours);
+            Console.WriteLine("Cost: {0:C}", cost);
+
 
         }
 
